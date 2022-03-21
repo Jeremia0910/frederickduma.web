@@ -9,4 +9,5 @@ export const AppFooter = (props) => {
             <span className="font-medium ml-2">PrimeReact</span>
         </div>
     );
+    //jeremia
 }
