@@ -1,64 +1,58 @@
-import React from 'react';
-import { Button } from 'primereact/button';
-import { Card } from 'primereact/card';
-import { Timeline } from 'primereact/timeline';
-import classNames from 'classnames';
+import React from "react";
 
-const TimelineDemo = () => {
-    const customEvents = [
-        {
-            status: 'Ordered',
-            date: '15/10/2020 10:30',
-            icon: 'pi pi-shopping-cart',
-            color: '#9C27B0',
-            image: 'game-controller.jpg'
-        },
-        { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },
-        { status: 'Shipped', date: '15/10/2020 16:15', icon: 'pi pi-envelope', color: '#FF9800' },
-        { status: 'Delivered', date: '16/10/2020 10:00', icon: 'pi pi-check', color: '#607D8B' }
-    ];
+const EmptyPage = () => {
+    return (
+        <div className="grid">
+            <div className="col-12">
+                <div className="card">
+                    <h3>Pelayanan Kami</h3>
+                    <p>
+                        <h5>Hukum Perusahaan :</h5>
+                        Pendirian Perusahaan Asing (Penanaman Modal Asing), Pendirian perusahaan umum, (local), RUPS Biasa dan RUPS Luar Biasa, pembelian/akuisisi Perusahaan, merger, legal due diligence (uji tuntas dari segi hukum), jual beli saham, perubahan anggaran dasar Perusahaan, perjanjian
+                        kerja sama, draft dan analisa kontrak, restrukturisasi Perusahaan, pengurusan legalitas Perusahan, penutupan & likuidasi Perusahaan, pendampingan Perusahan baik posisinya sebagai Penggugat maupun sebagai Tergugat atau Turut Tergugat, Kepailitan.
+                    </p>
+                    <p>
+                        <h5>Hak Kekayaan Intelektual :</h5>
+                        Pendaftaran Merek, Hak Cipta, Desain Industri, Paten Biasa, Paten Sederhana, Rahasia Dagang, penelusuran merek, Desain Industri, Paten Biasa, Paten Sederhana, Rahasia Dagang; Pengurusan perubahan alamat pemilik Merek, Hak Cipta, Desain Industri, Paten Biasa, Paten Sederhana,
+                        Rahasia Dagang; Pengalihan Hak Cipta, Desain Industri, Paten Biasa, Paten Sederhana, Rahasia Dagang; Perpanjangan Merek, oposisi, tanggapan, sanggahan, monitoring.
+                    </p>
+                    <p>
+                        <h5>Ketenagakerjaan :</h5>
+                        Penanganan Ketenagakerjaan berdasarkan Undang-Undang Cipta Kerja, Perjanjian Kerja/Kontrak Kerja, Peraturan Perusahaan, Perjanjian Kerja Bersama, pendampingan Bipartit, Tripartit, Wajib Lapor, legalitas tenaga kerja asing, Pemutusan Hubungan Kerja (PHK), Sengketa Hak antara
+                        Pengusaha dengan dengan Karyawan, Sengketa Kepentingan dalam Perjanjian Kerja Bersama (PKB), Sengketa di Pengadilan Hubungan Industrial.
+                    </p>
+                    <p>
+                        <h5>Hukum Perorangan (Hukum Keluarga) :</h5>
+                        Perjanjian Kawin, Penguruan Perceraian baik sebagai Penggugat maupun Tergugat, Pengurusan Akta Perceraian di Dinas Kependudukan dan Catatan Sipil, Kekerasan Dalam Rumah Tangga (KDRT), Hak Asuh Anak, Harta Bersama, Warisan, Wasiat.
+                    </p>
+                    <p>
+                        <h5>Penanganan Utang Piutang :</h5>
+                        Pengurusan restrukturisasi utang, memberikan Somasi/Surat Peringatan Hukum, melakukan negosiasi & mediasi dengan pihak lawan, Pelaporan Pidana Penipuan/Penggelapan ke Kepolisian, Pengajuan Gugatan Perdata ke Pengadilan Negeri atas utang piutang, Pengajuan Gugatan Kepailitan
+                        ke Pengadilan Niaga.
+                    </p>
+                    <p>
+                        <h5>Hukum Agraria (Pertanahan) :</h5>
+                        Pengurusan kasus pembebasan tanah, pengurusan peningkatan hak tanah, sengketa jual beli tanah, sewa menyewa tanah dan bangunan, eksekusi jaminan utang.
+                    </p>
+                    <p>
+                        <h5>Jasa Hukum Lainnya</h5>
+                        <p>Dalam melengkapi jasa hukum kami juga menyediakan berbagai jasa hukum pendukung lainnya, yang meliputi :</p>
 
-    const horizontalEvents = [
-        '2020', '2021', '2022', '2023'
-    ];
+                        <p><b>A. Penelitian/Kajian,</b>analisa terhadap Putusan-Putusan Mahkamah Agung dan/atau Mahkamah Konstitusi, Analisa dan/atau Membuat rancangan Kebijakan, Kajian Hukum untuk mendukung studi kelayakan, Penelitian hukum untuk strategi bisnis, Kajian dampak peraturan perundang-undangan, membuat rancangan Perundang-undangan dan/atau turunannya.</p>
+                        <p><b>B. Pembiayaan dan Perbankan,</b>memberikan pendapat hukum terkait penyelesaian kredit macet, menganalisa jaminan dan membantu bank untuk mengatur skema penyelesaian utang, Penyelesaian sengketa-litigasi maupun non litigasi termasuk mediasi (pendampingan di Pengadilan dan di luar Pengadilan baik posisi sebagai Kreditur maupun Debitur), menyediakan bantuan hukum apabila muncul masalah hukum dan membutuhkan penyelsaian melalui proses litigasi maupun penyelesaian sengketa alternative, pemasalahan fintech.</p>
+                        <p><b>C. Penyelesaian Sengketa,</b>penyelesaian Sengketa Alternatif – Arbitrase, Mediasi dan Negosiasi, Litigasi Umum, Perdata dan Sengketa Perjanjian, Uji Materi.</p>
+                        <p><b>D. Pelatihan Hukum,</b> Pelatihan Hukum kepada Perusahaan dan juga Pelatihan Hukum sesuai kebutuhan yang diperlukan
 
-
-    const customizedContent = (item) => {
-        return (
-            <Card title={item.status} subTitle={item.date}>
-                { item.image && <img src={`assets/demo/images/product/${item.image}`} onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={item.name} width={200} className="shadow-2 mb-3" />}
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-                <Button label="Read more" className="p-button-text"></Button>
-            </Card>
-        );
-    };
-
-    const customizedMarker = (item) => {
-        return (
-            <span className="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-2" style={{ backgroundColor: item.color }}>
-                <i className={classNames('marker-icon', item.icon)}></i>
-            </span>
-        );
-    };
-
-    return <div className="grid timeline-demo">
-        <div className="col-12">
-            <div className="card">
-                <h4>Timeline</h4>
-
-                <h5>Custom Timeline</h5>
-                <Timeline value={customEvents} align="alternate" className="customized-timeline" marker={customizedMarker} content={customizedContent} />
-
-                <h5 style={{ marginTop: '5em' }}>Horizontal - Alternate Align</h5>
-                <Timeline value={horizontalEvents} layout="horizontal" align="alternate" content={(item) => item} opposite={<span>&nbsp;</span>} />
+</p>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-}
+    );
+};
 
 const comparisonFn = function (prevProps, nextProps) {
     return prevProps.location.pathname === nextProps.location.pathname;
 };
 
-export default React.memo(TimelineDemo, comparisonFn);
+export default React.memo(EmptyPage, comparisonFn);
