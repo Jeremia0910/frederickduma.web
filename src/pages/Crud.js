@@ -5,7 +5,9 @@ const EmptyPage = () => {
         <div className="grid">
             <div className="col-12">
                 <div className="card">
-                    <center><h3>Tentang Kami</h3></center>
+                    <center>
+                        <h3>Tentang Kami</h3>
+                    </center>
                     <p>
                         <b>Frederick Duma & Partners merupakan kantor hukum</b> berkedudukan di Tangerang Selatan yang didirikan oleh Advokat yang berpengalaman dan memiliki integritas dalam menjalankan profesinya. Jasa pelayanan hukum kami diberikan kepada masyarakat baik perorangan maupun badan
                         hukum, yang bersifat litigasi maupun non litigasi. Prinsip utama kami adalah menjaga kepercayaan dan memberikan penyelesaian yang baik kepada klien. Kami berkomitmen untuk selalu siap mendedikasikan diri dalam membantu siapapun yang mencari keadilan baik perorangan maupun
